@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+	<bean id="gc" class="com.IOC.classes.GoldCustomer">
+		<property name="name" value="Virat"></property>
+		<property name="type" value="Gold Customer"></property>
+		<property name="address" ref="hyd"></property>
+	</bean>
+	<bean id="pc" class="com.IOC.classes.PlatinumCustomer">
+		<property name="name" value="Kshitij"></property>
+		<property name="type" value="Platinum Customer"></property>
+		<property name="address" ref="bgl"></property>
+	</bean>
+	
+	<bean id="hyd" class="com.IOC.Address.Address">
+		<property name="city" value="Hyderabad"></property>
+		<property name="state" value="Telangana"></property>
+	</bean>
+	<bean id="bgl" class="com.IOC.Address.Address">
+		<property name="city" value="Banglore"></property>
+		<property name="state" value="Karnataka"></property>
+	</bean>
+</beans>
